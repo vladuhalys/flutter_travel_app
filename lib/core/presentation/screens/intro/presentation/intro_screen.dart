@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
+import 'widgets/center_button.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -9,27 +10,13 @@ class IntroScreen extends StatelessWidget {
     return Scaffold(
         body: Stack(
       children: [
-        Image.asset(
-          'assets/backgrounds/intro.jpg',
-          fit: BoxFit.cover,
-          height: (GetPlatform.isAndroid || GetPlatform.isIOS)
-              ? MediaQuery.of(context).size.height
-              : null,
-          width: (GetPlatform.isWeb) ? MediaQuery.of(context).size.width : null,
-        ),
-        Align(
+        Image.asset('assets/backgrounds/intro.jpg',
+            fit: BoxFit.cover, height: MediaQuery.of(context).size.height),
+        const Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 100),
-              child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Text'),
-                  style: ButtonStyle(
-                    fixedSize: MaterialStateProperty.all(const Size(220, 70)),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(70.0))),
-                  )),
+              padding: EdgeInsets.only(bottom: 100),
+              child: CenterButton(),
             ))
       ],
     ));
