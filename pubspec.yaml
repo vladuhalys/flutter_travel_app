@@ -13,6 +13,7 @@ dependencies:
   animated_bottom_navigation_bar: ^1.2.0
   shared_preferences: ^2.2.0
   flutter_svg: ^2.0.7
+  badges: ^3.1.1
 
 dev_dependencies:
   flutter_test:
@@ -34,9 +35,13 @@ flutter:
           
   uses-material-design: true
   assets:
+    - assets/images/user_photo.jpg
+    - assets/images/human.svg
     - assets/backgrounds/intro.jpg
     - assets/icons/action.svg
     - assets/icons/star.svg
     - assets/icons/notif.svg
+    - assets/icons/search.svg
+    
 
   
