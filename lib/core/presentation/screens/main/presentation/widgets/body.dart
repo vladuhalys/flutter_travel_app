@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'body/carusel.dart';
+import 'body/category_list.dart';
 import 'body/center_image.dart';
 import 'body/up_bar_row.dart';
 
@@ -8,17 +10,20 @@ class MainBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(top: 20, left: 20),
-          child: UpBarBody(),
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            const UpBarBody(),
+            const CenterImage(),
+            CategoryList(),
+            Carusel(),
+            const SizedBox(height: 50),
+          ],
         ),
-        Padding(
-          padding: EdgeInsets.only(left: 20, right: 20),
-          child: CenterImage(),
-        ),
-      ],
+      ),
     );
   }
 }
