@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/body.dart';
-import 'widgets/bottom_bar.dart';
-import 'widgets/floating_button.dart';
+import '../../../widgets/bottom_bar.dart';
+import '../../../widgets/floating_button.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
